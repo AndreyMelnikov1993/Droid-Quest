@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mQuestionTextView =
                 (TextView)findViewById(R.id.question_text_view);
+        int question = mQuestionBank[mCurrentIndex].getTextResID();
+        mQuestionTextView.setText(question);
         mTrueButton = (Button) findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
             @Override
